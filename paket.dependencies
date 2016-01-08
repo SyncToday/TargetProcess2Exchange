@@ -1,0 +1,50 @@
+source https://nuget.org/api/v2
+
+nuget Autofac.Configuration 4.0.0-beta8-262
+nuget Destructurama.FSharp
+nuget EventStore.Client.FSharp
+nuget EventStore.Client.PreRelease
+nuget Expression.Blend.Sdk
+nuget FSharp.Data
+nuget FSharp.Data.SqlClient
+nuget FSharp.Formatting
+nuget FSharp.ViewModule.Core
+nuget FsXaml.Wpf
+nuget FunScript
+nuget FunScript.TypeScript.Binding.jquery
+nuget FunScript.TypeScript.Binding.lib
+nuget jQuery
+nuget Logary
+nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+nuget Microsoft.Framework.Configuration.Json >= 1.0.0-beta8 prerelease
+nuget Microsoft.Net.Compilers
+nuget Microsoft.Office.js
+nuget Microsoft.Orleans.Templates.Grains
+nuget Microsoft.Orleans.Templates.Interfaces
+nuget Microsoft.Owin 3.0.1
+nuget ModernUI.WPF
+nuget Mono.Cecil 0.9.6.1
+nuget Newtonsoft.Json
+nuget NMemory
+nuget NUnit ~> 2
+nuget NUnit.Runners ~> 2
+nuget FAKE
+nuget Orleankka.Fsharp
+nuget Owin 1.0
+nuget SourceLink.Fake
+nuget Suave 0.33.0-libuv
+nuget System.Management.Automation
+nuget System.IO.FileSystem >= 4.0.1-beta-23409 prerelease
+nuget System.Runtime >= 4.0.21-beta-23516 prerelease
+nuget System.Diagnostics.Debug >= 4.0.11-beta-23409 prerelease
+nuget System.Threading >= 4.0.11-beta-23409 prerelease
+nuget System.Threading.Tasks >= 4.0.11-beta-23409 prerelease
+nuget System.Runtime.Extensions >= 4.0.11-beta-23409 prerelease
+nuget TickSpec
+nuget TickSpec.NUnit
+nuget WebSharper 3.5.14.215
+nuget WebSharper.Owin 3.5.5.112
+nuget WebSharper.Suave 3.5.6.19
+nuget WebSharper.UI.Next 3.5.17.191
+
+github fsharp/FAKE modules/Octokit/Octokit.fsx

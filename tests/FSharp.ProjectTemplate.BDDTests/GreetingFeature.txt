@@ -1,0 +1,5 @@
+﻿Feature: Greet people and tell them when you saw them last
+
+Scenario 1: John Doe gets Hello John Doe
+	When I meet John Doe
+	Then I say Hello John Doe

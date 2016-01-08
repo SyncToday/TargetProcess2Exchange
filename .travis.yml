@@ -1,0 +1,34 @@
+language: csharp
+
+sudo: false 
+
+addons:
+  apt:
+    packages:
+      - unzip 
+      - curl
+      - libunwind8  
+      - gettext
+      - libssl-dev
+      - libcurl4-openssl-dev
+      - zlib1g 
+      - libicu-dev 
+      - uuid-dev
+
+before_install:
+  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
+  - dnvm upgrade -r coreclr
+  - dnu restore
+  - npm install -g bower
+  - cd servers/frontend/aspnet5/FSharp.ProjectTemplate.Web
+  - npm install
+  - bower install
+  - dnu restore
+  - cd ../../../..
+
+
+before_install:
+  - chmod +x build.sh
+ 
+script: 
+  - ./build.sh All
