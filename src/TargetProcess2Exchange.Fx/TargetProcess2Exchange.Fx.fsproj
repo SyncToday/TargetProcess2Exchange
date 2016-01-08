@@ -52,6 +52,7 @@
   <ItemGroup>
     <None Include="Script.fsx">
     </None>
+    <Compile Include="Secret.fs" />
     <Compile Include="DomainTypes.fs">
     </Compile>
     <Compile Include="Library.fs">
