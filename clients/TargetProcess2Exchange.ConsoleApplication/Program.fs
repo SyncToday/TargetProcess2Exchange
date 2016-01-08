@@ -1,5 +1,5 @@
-﻿open FSharp.ProjectTemplate
-open FSharp.ProjectTemplate.Domain
+open TargetProcess2Exchange
+open TargetProcess2Exchange.Domain
 open Serilog
 open System.Runtime.Serialization.Formatters.Binary
 open System.IO

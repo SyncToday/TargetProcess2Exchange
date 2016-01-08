@@ -1,0 +1,23 @@
+type project
+owners
+    davidpodhola
+authors 
+    davidpodhola
+projectUrl
+    http://github.com/SyncToday/TargetProcess2Exchange
+iconUrl
+    https://raw.githubusercontent.com/SyncToday/TargetProcess2Exchange/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/SyncToday/TargetProcess2Exchange/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    
+summary
+    Synchronize TargetProcess User Stories to Exchange Tasks
+description
+    Synchronize TargetProcess User Stories to Exchange Tasks
+
+

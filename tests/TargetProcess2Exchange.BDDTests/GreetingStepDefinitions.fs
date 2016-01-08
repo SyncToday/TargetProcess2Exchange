@@ -1,4 +1,4 @@
-﻿module GreetingStepDefinitions
+module GreetingStepDefinitions
 
 open TickSpec
 open NUnit.Framework

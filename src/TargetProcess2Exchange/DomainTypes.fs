@@ -1,4 +1,4 @@
-﻿namespace FSharp.ProjectTemplate
+namespace TargetProcess2Exchange
 
 module Domain =
 

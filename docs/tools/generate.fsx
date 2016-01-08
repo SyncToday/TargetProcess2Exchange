@@ -11,17 +11,17 @@
 // (This is the original behaviour of ProjectScaffold prior to multi project support)
 let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "/##ProjectName##"
+let website = "/TargetProcess2Exchange"
 
-let githubLink = "http://github.com/##GitHome##/##GitName##"
+let githubLink = "http://github.com/SyncToday/TargetProcess2Exchange"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "##ProjectName##"
-    "project-author", "##Author##"
-    "project-summary", "##Summary##"
+  [ "project-name", "TargetProcess2Exchange"
+    "project-author", "davidpodhola"
+    "project-summary", "Synchronize TargetProcess User Stories to Exchange Tasks"
     "project-github", githubLink
-    "project-nuget", "http://nuget.org/packages/##ProjectName##" ]
+    "project-nuget", "http://nuget.org/packages/TargetProcess2Exchange" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

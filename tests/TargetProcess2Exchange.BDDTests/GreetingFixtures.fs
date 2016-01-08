@@ -1,4 +1,4 @@
-﻿module NUnit.TickSpec
+module NUnit.TickSpec
 
 open NUnit.Framework
 open System.IO

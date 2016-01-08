@@ -1,6 +1,6 @@
-﻿namespace FSharp.ProjectTemplate
+namespace TargetProcess2Exchange
 
-open FSharp.ProjectTemplate.Domain
+open TargetProcess2Exchange.Domain
 open Serilog
 open System
 
@@ -13,7 +13,7 @@ open System
 ///
 module Library = 
   
-    Log.Information( "Library FSharp.ProjectTemplate loaded" )
+    Log.Information( "Library TargetProcess2Exchange loaded" )
 
     // the support methods
     type SaveLastHello =

@@ -1,4 +1,4 @@
-﻿module FSharp.ProjectScaffold.Tests
+module TargetProcess2Exchange.Tests
 
 open NUnit.Framework
 open Serilog
@@ -14,9 +14,9 @@ type SetupTest() =
             .CreateLogger()
         Log.Information( "Tests started" )
 
-open FSharp.ProjectTemplate
+open TargetProcess2Exchange
 open NUnit.Framework
-open FSharp.ProjectTemplate.Domain
+open TargetProcess2Exchange.Domain
 open Serilog
 
 [<Test>]
