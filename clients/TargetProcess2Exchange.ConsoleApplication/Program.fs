@@ -14,5 +14,4 @@ let main argv =
     Log.Information( "Console application started" )
 
     printfn "%A" argv
-    printfn "%A" (Library.api(Library.LoadFake, Library.SaveFake).Hello {FirstName="John";LastName="Rambo"})
     0 // return an integer exit code

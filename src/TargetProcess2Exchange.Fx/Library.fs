@@ -14,44 +14,36 @@ open System.Net
 ///
 module Library = 
   
+    open Microsoft.Exchange.WebServices.Data
+
     let load =
-      let credentials = NetworkCredential(Secret.UserName, Secret.Password)
+      let credentials = NetworkCredential(Secret.TargetProcessUserName, Secret.TargetProcessPassword)
       let client = new WebClient()
       client.Credentials <- credentials
       let content = client.DownloadString( Secret.TargetProcessUrl + "/api/v1/UserStories/" )
       Domain.UserStories.Parse(content)
 
-    Log.Information( "Library TargetProcess2Exchange loaded" )
+    let private getService () =
+        let service = new ExchangeService()
+        service.EnableScpLookup <- true 
+        
+        service.Credentials <- 
+            new WebCredentials(
+                Secret.ExchangeUserEmail, 
+                Secret.ExchangePassword
+            )
 
-    // the support methods
-    type SaveLastHello =
-        Person -> unit
-    type LoadLastHello =
-        Person -> DateTime option
+        service.AutodiscoverUrl(Secret.ExchangeUserEmail, (fun _ -> true))
+        service
 
-    /// Returns Hello firstName lastName, I saw you for the last time on 1.1.1970
-    ///
-    /// ## Parameters
-    ///  - `person` - someone you would like to say hello to
-    let hello (loadLastHello:LoadLastHello, saveLastHello:SaveLastHello) (person : Person) = 
-        let lastHello = loadLastHello(person)
-        let result = 
-            match lastHello with
-            | Some lastHelloTime -> sprintf "Hello %s %s, I saw you for the last time on %O" person.FirstName person.LastName lastHelloTime
-            | None -> sprintf "Hello %s %s" person.FirstName person.LastName
-        saveLastHello (person)
-        result
+    let private getTasksFolder service =
+        Folder.Bind(service, WellKnownFolderName.Tasks)
 
-    let SaveFake (p : Person) = 0 |> ignore
-    let LoadFake (p : Person) = None
-
-    let api (loadLastHello:LoadLastHello, saveLastHello:SaveLastHello) = {
-        Hello = hello (loadLastHello, saveLastHello)
-    }
-
-/// Interface to be implemented by persistent layer and combined together in the client or server if needed
-///
-///
-type public IHelloPersistency =
-   abstract member Load: Person -> DateTime option
-   abstract member Save :  Person -> unit
+    let getTasks =
+        let service = getService ()
+        let folder = getTasksFolder service
+        let view = new ItemView(1000)
+        let folderItems = folder.FindItems(view)
+        folderItems 
+        //|> Seq.map toTask
+        //|> Seq.toArray

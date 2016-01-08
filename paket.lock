@@ -40,6 +40,7 @@ NUGET
     EventStore.Client.PreRelease (3.1.1)
       Newtonsoft.Json (>= 6.0.8)
       protobuf-net (>= 2.0.0.668)
+    EWS-Api-2.0 (1.0.1)
     Expression.Blend.Sdk (1.0.2)
     FAKE (4.12.2)
     FParsec (1.0.2)
