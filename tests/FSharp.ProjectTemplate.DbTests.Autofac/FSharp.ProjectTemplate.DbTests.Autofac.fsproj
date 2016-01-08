@@ -67,16 +67,6 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\db\FSharp.ProjectTemplate.NMemory\FSharp.ProjectTemplate.NMemory.fsproj">
-      <Name>FSharp.ProjectTemplate.NMemory</Name>
-      <Project>{a5e69be1-2032-44a9-b4a5-53b0dc641ba6}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\db\FSharp.ProjectTemplate.SqlClient\FSharp.ProjectTemplate.SqlClient.fsproj">
-      <Name>FSharp.ProjectTemplate.SqlClient</Name>
-      <Project>{9d897b5e-5697-4e79-8f7d-df174cb0e4d9}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>

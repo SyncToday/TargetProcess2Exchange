@@ -1,8 +1,0 @@
-{
-  "name": "FSharp.ProjectTemplate.Web",
-  "private": true,
-  "dependencies": {
-    "react": "~0.14.3"
-  },
-  "exportsOverride": {}
-}

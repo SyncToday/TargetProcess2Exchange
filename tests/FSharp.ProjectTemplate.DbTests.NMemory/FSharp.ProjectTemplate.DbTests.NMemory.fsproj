@@ -57,8 +57,8 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="copy /y &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)\$(TargetName).dll.config&quot;" Condition=" '$(OS)' != 'Unix' "  />
-    <Exec Command="cp &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)$(TargetName).dll.config&quot;" Condition=" '$(OS)' == 'Unix'"/>
+    <Exec Command="copy /y &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)\$(TargetName).dll.config&quot;" Condition=" '$(OS)' != 'Unix' " />
+    <Exec Command="cp &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)$(TargetName).dll.config&quot;" Condition=" '$(OS)' == 'Unix'" />
   </Target>
   <ItemGroup>
     <None Include="Script.fsx" />
@@ -74,11 +74,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <ProjectReference Include="..\..\db\FSharp.ProjectTemplate.NMemory\FSharp.ProjectTemplate.NMemory.fsproj">
-      <Name>FSharp.ProjectTemplate.NMemory</Name>
-      <Project>{a5e69be1-2032-44a9-b4a5-53b0dc641ba6}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\FSharp.ProjectTemplate.Fx\FSharp.ProjectTemplate.Fx.fsproj">
       <Name>FSharp.ProjectTemplate.Fx</Name>
       <Project>{20eaba0d-bac0-4e2c-abcd-e0cd459669cf}</Project>
