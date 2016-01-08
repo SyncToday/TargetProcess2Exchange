@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -52,9 +52,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TargetProcess2Exchange\TargetProcess2Exchange.fsproj">
-      <Name>TargetProcess2Exchange</Name>
-      <Project>{376c2158-5bf6-41bf-a9ae-37752aedf031}</Project>
+    <ProjectReference Include="..\..\src\TargetProcess2Exchange.Fx\TargetProcess2Exchange.Fx.fsproj">
+      <Name>TargetProcess2Exchange.Fx</Name>
+      <Project>{20eaba0d-bac0-4e2c-abcd-e0cd459669cf}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TargetProcess2Exchange", "src\TargetProcess2Exchange\TargetProcess2Exchange.fsproj", "{376C2158-5BF6-41BF-A9AE-37752AEDF031}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
 	ProjectSection(SolutionItems) = preProject
 		build.fsx = build.fsx
@@ -65,22 +63,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|ARM.Build.0 = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|x64.Build.0 = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Debug|x86.Build.0 = Debug|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|Any CPU.Build.0 = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|ARM.ActiveCfg = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|ARM.Build.0 = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|x64.ActiveCfg = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|x64.Build.0 = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|x86.ActiveCfg = Release|Any CPU
-		{376C2158-5BF6-41BF-A9AE-37752AEDF031}.Release|x86.Build.0 = Release|Any CPU
 		{97BE55D0-C641-4C27-BA4A-F4717DE95034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97BE55D0-C641-4C27-BA4A-F4717DE95034}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97BE55D0-C641-4C27-BA4A-F4717DE95034}.Debug|ARM.ActiveCfg = Debug|Any CPU
