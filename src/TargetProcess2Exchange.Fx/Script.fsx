@@ -9,4 +9,5 @@
 
 
 let stories = TargetProcess2Exchange.Library.load 
-printfn "%A" stories
+//printfn "%A" stories
+stories.UserStories |> Seq.iter (fun t -> printfn "%A-%A\n%A" t.Id t.Name t.Description )
