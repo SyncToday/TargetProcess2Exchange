@@ -50,13 +50,13 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <None Include="Script.fsx">
-    </None>
     <Compile Include="Secret.fs" />
     <Compile Include="DomainTypes.fs">
     </Compile>
     <Compile Include="Library.fs">
     </Compile>
+    <None Include="Script.fsx">
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

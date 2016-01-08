@@ -1,8 +1,12 @@
-// Learn more about F# at http://fsharp.org. See the 'F# Tutorial' project
-// for more guidance on F# programming.
+#r "System.Xml.Linq.dll"
+#r """..\..\packages\FSharp.Data\lib\net40\FSharp.Data.DesignTime.dll"""
+#r """..\..\packages\FSharp.Data\lib\net40\FSharp.Data.dll"""
+#r """..\..\packages\Serilog\lib\net45\Serilog.dll"""
 
+#load "Secret.fs"
+#load "DomainTypes.fs"
 #load "Library.fs"
-open TargetProcess2Exchange
 
-let num = Library.hello 42
-printfn "%i" num
+
+let stories = TargetProcess2Exchange.Library.load 
+printfn "%A" stories

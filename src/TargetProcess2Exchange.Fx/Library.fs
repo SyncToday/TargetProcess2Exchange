@@ -3,6 +3,7 @@ namespace TargetProcess2Exchange
 open TargetProcess2Exchange.Domain
 open Serilog
 open System
+open System.Net
 
 /// Documentation for my library
 ///
@@ -13,6 +14,13 @@ open System
 ///
 module Library = 
   
+    let load =
+      let credentials = NetworkCredential(Secret.UserName, Secret.Password)
+      let client = new WebClient()
+      client.Credentials <- credentials
+      let content = client.DownloadString( Secret.TargetProcessUrl + "/api/v1/UserStories/" )
+      Domain.UserStories.Parse(content)
+
     Log.Information( "Library TargetProcess2Exchange loaded" )
 
     // the support methods
