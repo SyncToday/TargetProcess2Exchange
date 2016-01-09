@@ -23,7 +23,7 @@ module Library =
       let content = client.DownloadString( Secret.TargetProcessUrl + "/api/v1/UserStories/" )
       Domain.UserStories.Parse(content)
 
-    let private getService =
+    let private service =
         let service = new ExchangeService()
         service.EnableScpLookup <- true 
         
@@ -40,7 +40,6 @@ module Library =
         Folder.Bind(service, WellKnownFolderName.Tasks)
 
     let getTasks =
-        let service = getService
         let folder = getTasksFolder service
         let view = new ItemView(1000)
         let folderItems = folder.FindItems(view)
@@ -54,9 +53,15 @@ module Library =
           fun t -> 
              let potentialTaskSubjectStart = sprintf "%d-" t.Id
              let foundTask : Task option = getTasks |> Seq.tryFind( fun r -> r :? Task && r.Subject.StartsWith( potentialTaskSubjectStart ) ) |> Option.map (fun f -> downcast f )
-             match foundTask with
-             | None -> 0 |> ignore
-             | Some(s) -> 
-                s.Subject <- sprintf "%d-%s" t.Id t.Name
-                s.DueDate <- Support.nullableOfOption t.PlannedEndDate.Value
+             let copyToTask (userStory : UserStories.UserStory) (task : Task) =
+                task.Subject <- sprintf "%d-%s" userStory.Id userStory.Name
+                task.DueDate <- Support.nullableOfOption userStory.PlannedEndDate.Value
+                task.Save()
+               
+             let task = 
+               match foundTask with
+               | None -> Task(service)
+               | Some(s) ->  s
+
+             copyToTask t task
         ) 
