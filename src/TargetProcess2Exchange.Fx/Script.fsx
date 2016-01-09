@@ -3,6 +3,7 @@
 #r """..\..\packages\FSharp.Data\lib\net40\FSharp.Data.dll"""
 #r """..\..\packages\Serilog\lib\net45\Serilog.dll"""
 #r """..\..\packages\EWS-Api-2.0\lib\net35\Microsoft.Exchange.WebServices.dll"""
+#r """..\..\Support\Support\bin\Debug\Support.dll"""
 
 #load "Secret.fs"
 #load "DomainTypes.fs"
